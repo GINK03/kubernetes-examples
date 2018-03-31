@@ -60,3 +60,13 @@ NAME         TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)        AGE
 hello-web    LoadBalancer   10.3.241.118   35.194.169.208   80:30517/TCP   1m
 kubernetes   ClusterIP      10.3.240.1     <none>           443/TCP        5m
 ```
+
+サービスを止める
+```console
+$ kubectl delete service hello-web
+```
+
+コンテナクラスタを削除する
+```console
+$ gcloud container clusters delete hello-cluster
+```
