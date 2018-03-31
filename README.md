@@ -27,3 +27,8 @@ Dockerfileのビルド
 ```console
 $ docker build -t gcr.io/${PROJECT_ID}/hello-app:v1 .
 ```
+
+GCPにアップロード
+```console
+$ gcloud docker -- push gcr.io/${PROJECT_ID}/hello-app:v1
+```
