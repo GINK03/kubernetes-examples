@@ -38,3 +38,12 @@ Dockerfileをローカルで実行
 $ docker run --rm -p 8080:8080 gcr.io/${PROJECT_ID}/hello-app:v1
 $ curl http://localhost:8080
 ```
+
+Kubernetesのクラスタを立ち上げ（デプロイはできていない）
+```console
+$ gcloud container clusters create hello-cluster --num-nodes=3
+```
+KuberctlでDocker Imageをデプロイする
+```console
+$ kubectl run hello-web --image=gcr.io/${PROJECT_ID}/hello-app:v1 --port 8080
+```
