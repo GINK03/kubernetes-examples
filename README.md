@@ -32,3 +32,8 @@ GCPにアップロード
 ```console
 $ gcloud docker -- push gcr.io/${PROJECT_ID}/hello-app:v1
 ```
+
+Dockerfileをローカルで実行
+```console
+$ docker run --rm -p 8080:8080 gcr.io/${PROJECT_ID}/hello-app:v1
+```
