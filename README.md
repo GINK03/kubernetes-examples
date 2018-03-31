@@ -70,3 +70,8 @@ $ kubectl delete service hello-web
 ```console
 $ gcloud container clusters delete hello-cluster
 ```
+
+
+## status
+2018/4/1
+Dask + Kubernetesがうまくデプロイできないので、サスペンド予定
