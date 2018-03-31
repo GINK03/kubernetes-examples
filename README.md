@@ -47,3 +47,8 @@ KuberctlでDocker Imageをデプロイする
 ```console
 $ kubectl run hello-web --image=gcr.io/${PROJECT_ID}/hello-app:v1 --port 8080
 ```
+
+グローバルIPを与えて公開する
+```console
+$ kubectl expose deployment hello-web --type=LoadBalancer --port 80 --target-port 8080
+```
